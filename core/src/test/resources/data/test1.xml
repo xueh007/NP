@@ -1,0 +1,57 @@
+<request>
+    <machines>
+        <machine id="m1" power="0.8"/>
+        <machine id="m2" power="1.1"/>
+    </machines>
+    <jobs>
+        <job id="job1">
+            <operations>
+                <operation id="o11">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="3" energyConsumption="3"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o12">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="4" energyConsumption="4"/>
+                        <machine id="m2" processTime="3" energyConsumption="5"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+        <job id="job2">
+            <operations>
+                <operation id="o21">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="2" energyConsumption="4"/>
+                        <machine id="m2" processTime="2" energyConsumption="4"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o22">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="3" energyConsumption="4"/>
+                        <machine id="m2" processTime="4" energyConsumption="6"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+    </jobs>
+    <dependencies>
+        <depency operationID="o11">
+            <preOperations></preOperations>
+            <nextOperations>o12</nextOperations>
+        </depency>
+        <depency operationID="o12">
+            <preOperations>o11</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+        <depency operationID="o21">
+            <preOperations></preOperations>
+            <nextOperations>o22</nextOperations>
+        </depency>
+        <depency operationID="o22">
+            <preOperations>o21</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+    </dependencies>
+</request>

@@ -1,0 +1,22 @@
+<response executionTime="1223">
+    <solution id="1" energyConsumption="16" completionTime="11">
+        <machine id="m1" energyConsumption="8" completionTime="6">
+            <operation id="o11"/>
+            <operation id="o12"/>
+        </machine>
+        <machine id="m2" energyConsumption="8" completionTime="11">
+            <operation id="o21"/>
+            <operation id="o22"/>
+        </machine>
+    </solution>
+    <solution id="2" energyConsumption="16" completionTime="11">
+        <machine id="m1" energyConsumption="8" completionTime="6">
+            <operation id="o11"/>
+            <operation id="o12"/>
+        </machine>
+        <machine id="m2" energyConsumption="8" completionTime="11">
+            <operation id="o21"/>
+            <operation id="o22"/>
+        </machine>
+    </solution>
+</response>

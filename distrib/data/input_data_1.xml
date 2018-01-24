@@ -1,0 +1,187 @@
+<request>
+    <machines>
+        <machine id="m1" power="995"/>
+        <machine id="m2" power="1485"/>
+        <machine id="m3" power="1910"/>
+        <machine id="m4" power="600"/>
+        <machine id="m5" power="430"/>
+    </machines>
+    <jobs>
+        <job id="job1">
+            <operations>
+                <operation id="o11">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="7.1" energyConsumption="170.7"/>
+                        <machine id="m2" processTime="7.1" energyConsumption="228.7"/>
+                        <machine id="m3" processTime="8.3" energyConsumption="317.2"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o12">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="6.7" energyConsumption="97.2"/>
+                        <machine id="m5" processTime="7.1" energyConsumption="80.9"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o13">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="6.4" energyConsumption="138"/>
+                        <machine id="m2" processTime="6.4" energyConsumption="205.9"/>
+                        <machine id="m3" processTime="7.5" energyConsumption="310.4"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+        <job id="job2">
+            <operations>
+                <operation id="o21">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="1.3" energyConsumption="15.6"/>
+                        <machine id="m5" processTime="2" energyConsumption="17.3"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o22">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="1.8" energyConsumption="20.7"/>
+                        <machine id="m5" processTime="3.7" energyConsumption="29.5"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o23">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="1.2" energyConsumption="21.9"/>
+                        <machine id="m2" processTime="1.7" energyConsumption="44.1"/>
+                        <machine id="m3" processTime="3" energyConsumption="97.5"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o24">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="4.6" energyConsumption="50.6"/>
+                        <machine id="m5" processTime="6.3" energyConsumption="50.2"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+        <job id="job3">
+            <operations>
+                <operation id="o31">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="2.8" energyConsumption="60.4"/>
+                        <machine id="m2" processTime="2.3" energyConsumption="70.9"/>
+                        <machine id="m3" processTime="3.3" energyConsumption="119.1"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o32">
+                    <alternativeMachines>
+                       <machine id="m1" processTime="2.4" energyConsumption="49.8"/>
+                        <machine id="m2" processTime="1.9" energyConsumption="57.0"/>
+                        <machine id="m3" processTime="2.7" energyConsumption="96"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o33">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="5.5" energyConsumption="66"/>
+                        <machine id="m5" processTime="6.9" energyConsumption="60.5"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o34">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="3.3" energyConsumption="62.9"/>
+                        <machine id="m2" processTime="3.3" energyConsumption="89.7"/>
+                        <machine id="m3" processTime="5.2" energyConsumption="173.5"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o35">
+                    <alternativeMachines>
+                        <machine id="m1" processTime="5.5" energyConsumption="100.3"/>
+                        <machine id="m2" processTime="5.5" energyConsumption="149.7"/>
+                        <machine id="m3" processTime="7" energyConsumption="245.1"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+        <job id="job4">
+            <operations>
+                <operation id="o41">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="12.6" energyConsumption="195.3"/>
+                        <machine id="m5" processTime="15.0" energyConsumption="176.5"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o42">
+                    <alternativeMachines>
+                       <machine id="m1" processTime="15.3" energyConsumption="367.9"/>
+                        <machine id="m2" processTime="16.3" energyConsumption="517.4"/>
+                        <machine id="m3" processTime="19.5" energyConsumption="734.8"/>
+                    </alternativeMachines>
+                </operation>
+                <operation id="o43">
+                    <alternativeMachines>
+                        <machine id="m4" processTime="7.4" energyConsumption="99.9"/>
+                        <machine id="m5" processTime="9.5" energyConsumption="94.1"/>
+                    </alternativeMachines>
+                </operation>
+            </operations>
+        </job>
+    </jobs>
+    <dependencies>
+        <depency operationID="o11">
+            <preOperations></preOperations>
+            <nextOperations>o12</nextOperations>
+        </depency>
+        <depency operationID="o12">
+            <preOperations>o11</preOperations>
+            <nextOperations>o13</nextOperations>
+        </depency>
+        <depency operationID="o13">
+            <preOperations>o12</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+        <depency operationID="o21">
+            <preOperations></preOperations>
+            <nextOperations>o22</nextOperations>
+        </depency>
+        <depency operationID="o22">
+            <preOperations>o21</preOperations>
+            <nextOperations>o23</nextOperations>
+        </depency>
+        <depency operationID="o23">
+            <preOperations>o22</preOperations>
+            <nextOperations>o24</nextOperations>
+        </depency>
+        <depency operationID="o24">
+            <preOperations>o23</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+        <depency operationID="o31">
+            <preOperations></preOperations>
+            <nextOperations>o32,o33</nextOperations>
+        </depency>
+        <depency operationID="o32">
+            <preOperations>o31</preOperations>
+            <nextOperations>o34</nextOperations>
+        </depency>
+        <depency operationID="o33">
+            <preOperations>o31</preOperations>
+            <nextOperations>o35</nextOperations>
+        </depency>
+        <depency operationID="o34">
+            <preOperations>o32</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+        <depency operationID="o35">
+            <preOperations>o33</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+        <depency operationID="o41">
+            <preOperations></preOperations>
+            <nextOperations>o42</nextOperations>
+        </depency>
+        <depency operationID="o42">
+            <preOperations>o41</preOperations>
+            <nextOperations>o43</nextOperations>
+        </depency>
+        <depency operationID="o43">
+            <preOperations>o42</preOperations>
+            <nextOperations></nextOperations>
+        </depency>
+    </dependencies>
+</request>
